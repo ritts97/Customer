@@ -11,5 +11,11 @@ salary = float(st.text_input("Enter Salary: ","10000"))
 featureInput = np.array([[age,salary]])
 
 customerType = model.predict(featureInput)
+customerTypeName
 
-st.write(f'Hello, *World!* :sunglasses: . Customer Group : {customerType} ')
+if customerType == [0]:
+  customerTypeName == "Non Purchasing"
+else:
+  customerTypeName == "Purchasing"
+
+st.write(f'*Hello!* :sunglasses: . Customer Group : {customerTypeName} ')
